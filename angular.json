@@ -25,7 +25,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/tinymce/tinymce.js",
+              "src/assets/tinymce/themes/silver/theme.js",
+              "src/assets/tinymce/plugins/link/plugin.js",
+              "src/assets/tinymce/plugins/paste/plugin.js",
+              "src/assets/tinymce/plugins/table/plugin.js"
+
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
