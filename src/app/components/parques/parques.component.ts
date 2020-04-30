@@ -9,6 +9,7 @@ export class ParquesComponent implements OnInit, OnChanges, OnDestroy {
   @Input() nombre:string; 
   @Input('metros_cuadrados') metros:number; // Con @Input() pasamos datos de un componente padre a un hijo
                                             // Tambien podemos crearle un alias añadiendole @Input('alias') 
+  @Input('DuenoTienda') Rdueno:string;
   public vegetacion:string;
   public abierto:boolean;
  
@@ -21,6 +22,7 @@ export class ParquesComponent implements OnInit, OnChanges, OnDestroy {
       this.metros = 450;
       this.vegetacion = 'Alta'; 
       this.abierto = true;
+      this.Rdueno="Sin dueño";
   }
 
   ngOnChanges(SimpleChange){
@@ -39,7 +41,8 @@ export class ParquesComponent implements OnInit, OnChanges, OnDestroy {
       'nombre' : this.nombre, 
       'metros' : this.metros, 
       'vegetacion' : this.vegetacion, 
-      'abierto': this.abierto
+      'abierto': this.abierto,
+      'dueño':this.Rdueno
     });
 
   }

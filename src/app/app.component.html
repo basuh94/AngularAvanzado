@@ -20,12 +20,7 @@
                 <li>
                     <a [routerLink] = "['/contact']"  [routerLinkActive]="['active']"> <span class="glyphicon glyphicon-comment"></span> Contacto </a>
                 </li>
-                <li class="">
-                    <span *ngIf = "emailContact">
-                        <strong>Email de contacto:</strong> {{emailContact}} 
-                        <button (click)="elimarEmailLocalStorage()">Eliminar Contacto</button>
-                    </span>
-                </li>
+
             </div>
         </div>
     </nav> 

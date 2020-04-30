@@ -11,10 +11,13 @@ export class TiendaComponent implements OnInit {
   public title:string;
   public nombreDelParque:string
   public miParque:any
+  public dueno:string;
   
   constructor() { 
     this.title = 'Esta es la tienda';
     this.nombreDelParque="";
+    this.dueno = "Basuh94";
+
   }
 
   ngOnInit() {

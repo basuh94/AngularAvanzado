@@ -40,7 +40,7 @@ Componete Padre:
 
 <p *ngIf="nombreDelParque">
     Componente Hijo:
-    <app-parques [nombre] = "nombreDelParque" [metros_cuadrados] = "2738" (pasameLosDatos)="verDatosParque($event)"></app-parques>
+    <app-parques [nombre] = "nombreDelParque" [metros_cuadrados] = "2738"  [DuenoTienda]="dueno" (pasameLosDatos)="verDatosParque($event)"></app-parques>
     <!--para el outpur llamamos a la funcion que hemos creado con event emitter 
     y lo igualamos a la funcion creada para recoger los datos pasandole $event (donde $event lleva todo los datos enviados) -->
 </p>

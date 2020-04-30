@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
+//Importamos nuestro nuevo modulo Email
+import { ModuloEmailModule } from "./moduloemail/moduloemail.module";
+
 //Componentes
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ParquesComponent } from './components/parques/parques.component';
@@ -27,7 +30,8 @@ import { KeeperComponent } from './components/keeper/keeper.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ModuloEmailModule
   ],
   providers: [],
   bootstrap: [AppComponent]
