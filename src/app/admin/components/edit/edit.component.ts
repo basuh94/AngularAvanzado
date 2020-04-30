@@ -10,7 +10,7 @@ export class EditComponent {
     public emailContact:string;
   
     constructor(){
-        this.title = 'Admin Edit'
+        this.title = 'Editar'
     }
 
 }

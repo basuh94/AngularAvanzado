@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 //Importamos nuestro nuevo modulo Email
 import { ModuloEmailModule } from "./moduloemail/moduloemail.module";
+import { AdminModule } from "./admin/admin.module";
 
 //Componentes
 import { TiendaComponent } from './components/tienda/tienda.component';
@@ -16,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { KeeperComponent } from './components/keeper/keeper.component';
   ],
   imports: [
     BrowserModule,
+    AdminModule,
     AppRoutingModule,
     FormsModule,
     ModuloEmailModule

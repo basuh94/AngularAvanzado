@@ -10,7 +10,7 @@ export class ListComponent {
     public emailContact:string;
   
     constructor(){
-        this.title = 'Admin List'
+        this.title = 'Listado'
     }
 
 }

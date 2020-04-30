@@ -10,7 +10,7 @@ export class AddComponent {
     public emailContact:string;
   
     constructor(){
-        this.title = 'Admin Add'
+        this.title = 'Añadir'
     }
 
 }
