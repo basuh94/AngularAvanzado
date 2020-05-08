@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ListComponent {
     public title:string;
     public emailContact:string;
+    public numbers = new Array(15);
   
     constructor(){
         this.title = 'Listado'
