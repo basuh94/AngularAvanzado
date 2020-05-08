@@ -17,7 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -34,7 +34,9 @@ import { KeeperComponent } from './components/keeper/keeper.component';
     AdminModule,
     AppRoutingModule,
     FormsModule,
-    ModuloEmailModule
+    ModuloEmailModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

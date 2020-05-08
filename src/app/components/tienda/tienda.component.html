@@ -1,7 +1,14 @@
+<a class="boton_activo btn btn-success" [@marcar]="status" (click)="CambiarEstado()">
+    <spam *ngIf="status == 'inactive'">Boton Inactivo</spam>
+    <spam *ngIf="status == 'active'">Boton Activo</spam>  
+</a>
+
+
+<hr>
+<h4>Animaciones CSS3</h4>
 <a class="boton_transiciones">Transiciones</a>
 
 <div class="clearfix">
-    <br>
 </div>
 
 <div class="caja_animada">
