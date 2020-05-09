@@ -50,8 +50,7 @@
     /*
     animation-name: rotacion;  Asignamos el keygrames que vamos a usar 
     animation-duration: 20s;
-    animation-iteration-count: infinite;  Infinite para que no pare la transición 
-    */ 
+    animation-iteration-count: infinite; Infinite para que no pare la transición */ 
 }
 
 @keyframes rotacion{  /* @keyframes para crear la animación */
