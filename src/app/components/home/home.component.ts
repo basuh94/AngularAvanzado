@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Fundido } from '../animation'
+import { fadeIn } from '../animation'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  animations: [Fundido]
+  animations: [fadeIn] // Declaramos la animacion Fundido que hemos creado en el archivo animation.ts
 })
+
 export class HomeComponent implements OnInit {
   public title:string;
   constructor() { 

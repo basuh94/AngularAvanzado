@@ -1,64 +1,68 @@
-<a class="boton_activo btn btn-success" [@marcar]="status" (click)="CambiarEstado()">
-    <spam *ngIf="status == 'inactive'">Boton Inactivo</spam>
-    <spam *ngIf="status == 'active'">Boton Activo</spam>  
-</a>
+<div class="col-lg-12" [@fadeIn]>
+
+    <a class="boton_activo btn btn-success" [@marcar]="status" (click)="CambiarEstado()">
+        <spam *ngIf="status == 'inactive'">Boton Inactivo</spam>
+        <spam *ngIf="status == 'active'">Boton Activo</spam>  
+    </a>
 
 
-<hr>
-<h4>Animaciones CSS3</h4>
-<a class="boton_transiciones">Transiciones</a>
+    <hr>
+    <h4>Animaciones CSS3</h4>
+    <a class="boton_transiciones">Transiciones</a>
 
-<div class="clearfix">
-</div>
-
-<div class="caja_animada">
-
-</div>
-
-<hr>
-<h4>Ulizar jQuery dentro de Angular</h4>
-<button id="botonJQ">Mostrar Texto</button>
-
-<div id = "mostrarJQ">
-    <p  class = "alert alert-warning">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <div id = "box" style="border:1px solid black; width:100px; height:100px;">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+    <div class="clearfix">
     </div>
+
+    <div class="caja_animada">
+
+    </div>
+
+    <hr>
+    <h4>Ulizar jQuery dentro de Angular</h4>
+    <button id="botonJQ">Mostrar Texto</button>
+
+    <div id = "mostrarJQ">
+        <p  class = "alert alert-warning">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div id = "box" style="border:1px solid black; width:100px; height:100px;">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        </div>
+    </div>
+
+    <hr/>
+    Componete Padre:
+    <h2>{{title}}</h2>
+
+    <ul>
+        <li>Camiseta Rosa</li>
+        <li>Gorra Negra</li>
+    </ul>
+
+    <div *ngIf="miParque">
+        <h4>Datos enviados desde el hijo:</h4>
+        <ol>
+            <li>{{miParque.nombre}}</li>
+            <li>{{miParque.metros}}</li>
+            <li>{{miParque.vegetacion}}</li>
+            <li>{{miParque.abierto}}</li>
+        </ol>
+    </div>
+
+    <hr/>
+
+    <p >
+        Nombre del parque:
+        <input type = "text"  name = "nombreDelParque" [(ngModel)] = "nombreDelParque" (keyup) = "mostrarNombre()"/>
+    </p>
+
+    <br> 
+
+    <hr/>
+
+    <p *ngIf="nombreDelParque">
+        Componente Hijo:
+        <app-parques [nombre] = "nombreDelParque" [metros_cuadrados] = "2738"  [DuenoTienda]="dueno" (pasameLosDatos)="verDatosParque($event)"></app-parques>
+        <!--para el outpur llamamos a la funcion que hemos creado con event emitter 
+        y lo igualamos a la funcion creada para recoger los datos pasandole $event (donde $event lleva todo los datos enviados) -->
+    </p>
+
 </div>
-
-<hr/>
-Componete Padre:
-<h2>{{title}}</h2>
-
-<ul>
-    <li>Camiseta Rosa</li>
-    <li>Gorra Negra</li>
-</ul>
-
-<div *ngIf="miParque">
-    <h4>Datos enviados desde el hijo:</h4>
-    <ol>
-        <li>{{miParque.nombre}}</li>
-        <li>{{miParque.metros}}</li>
-        <li>{{miParque.vegetacion}}</li>
-        <li>{{miParque.abierto}}</li>
-    </ol>
-</div>
-
-<hr/>
-
-<p >
-    Nombre del parque:
-    <input type = "text"  name = "nombreDelParque" [(ngModel)] = "nombreDelParque" (keyup) = "mostrarNombre()"/>
-</p>
-
-<br> 
-
-<hr/>
-
-<p *ngIf="nombreDelParque">
-    Componente Hijo:
-    <app-parques [nombre] = "nombreDelParque" [metros_cuadrados] = "2738"  [DuenoTienda]="dueno" (pasameLosDatos)="verDatosParque($event)"></app-parques>
-    <!--para el outpur llamamos a la funcion que hemos creado con event emitter 
-    y lo igualamos a la funcion creada para recoger los datos pasandole $event (donde $event lleva todo los datos enviados) -->
-</p>

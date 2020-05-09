@@ -1,13 +1,18 @@
 import {AnimationTriggerMetadata,trigger, state, style, transition, animate} from "@angular/animations";
 
-export const Fundido:AnimationTriggerMetadata = 
-    trigger('componentAnimation',[
+export const fadeIn:AnimationTriggerMetadata = 
+    trigger('fadeIn',[
         transition(':enter',[
             style({
-                opacity: 0 
+                opacity: 0, 
+                //transform:'translateY(-15%)'
+                //transoform: 'rotate(150deg)'
+
             }),
-            animate('500ms linear',style({
-                opacity: 1
+            animate('300ms linear',style({
+                opacity: 1,
+                //transform:'translateY(0)'
+                //transoform: 'rotate(0deg)'
             }))
         ])
         
